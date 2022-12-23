@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/************GLOBAL RULES************/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-image: url(../images/body-back.jpeg);
+    background-size: cover;
+}
+
+/************GLOBAL RULES************/
+.player-data {
+    width: 1080px;
+    margin: 20px auto 0;
+    background-color: #f6f6f6;
+    padding: 20px;
+    font-size: 24px;
+    border: 2px solid #2196f3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 1);
+    background-color: #000;
+    background-image: url(../images/mobile\ legend\ logo\ png.png);
+    background-size: contain;
+    font-weight: bold;
+
+}
+
+.name-data,
+.tries-data {
+    background-color: #26578bbb;
+    padding: 5px 10px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    color: #fff;
+}
+
+/*********START GAME CONTAINER*****/
+.game-container {
+    width: 1100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container.prevented {
+    pointer-events: none;
+}
+
+.image-block {
+    height: 200px;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+    flex: 1 0 200px;
+    margin: 0 10px 20px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.image-block img {
+    width: 180px;
+    margin-top: 10px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.image-block .front {
+    /* background-color: #333; */
+    background-image: url(../images/mobile-legends\ -logo.png);
+    background-size: cover;
+    background-position: center center;
+    background-color: #333;
+
+}
+
+
+.image-block .back {
+    background-color: #607d8b;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    line-height: 70px;
+}
+
+.image-block .character {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    border: 5px solid #2196f3;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 1);
+    -webkit-box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 1);
+}
+
+.image-block.flip,
+.image-block.matched {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    pointer-events: none;
+}
+
+/*********end GAME CONTAINER*****/
+
+.control-buttons {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: #2195f362;
+}
+
+.control-buttons span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.win-popup {
+    padding: 30px 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    z-index: 3;
+    color: #fff;
+    background-color: #f44336;
+    border-radius: 10px;
+    display: none;
+}
+
+
+.john,
+.lesely {
+    position: absolute;
+
+}
+
+.john {
+    left: 20px;
+    top: 10px;
+}
+
+
+
+
+.lesely {
+    right: 20px;
+    top: 10px;
+}

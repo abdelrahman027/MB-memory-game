@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <!-- my style -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>MB-Memory-Game</title>
+</head>
+
+<body>
+    <div class="win-popup">
+        <h1>You win</h1>
+        <p>refresh to restart</p>
+    </div>
+    <div class="control-buttons">
+        <span>START GAME</span>
+    </div>
+    <!-- START USER INFO -->
+    <div class="player-data">
+        <div class="name">
+            <div class="name-data">hello : <span></span></div>
+            <div class="lesely">
+                <img src="./images/lesly-png.png" alt="" style="width:200px ;">
+            </div>
+        </div>
+        <div class="tries">
+            <div class="tries-data">wrong tries : <span>0</span></div>
+            <div class="john">
+                <img src="./images/johmnson-png.png" alt="" style="width:200px ;">
+            </div>
+        </div>
+    </div>
+    <!-- END USER INFO -->
+    <!-- START GAME BLOCKS -->
+    <div class="game-container">
+        <!-- FIRST -->
+        <div class="image-block" data-char="lunux">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/lunux.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="lunux">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/lunux.jpg" alt="">
+            </div>
+        </div>
+        <!-- FIRST -->
+        <!-- SECOND -->
+        <div class="image-block" data-char="argus">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/argus.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="argus">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/argus.jpg" alt="">
+            </div>
+        </div>
+        <!-- SECOND -->
+        <!-- THIRD -->
+        <div class="image-block" data-char="kimmy">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/kimmy.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="kimmy">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/kimmy.jpg" alt="">
+            </div>
+        </div>
+        <!-- THIRD -->
+        <!-- FORTH -->
+        <div class="image-block" data-char="chou">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/chou.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="chou">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/chou.jpg" alt="">
+            </div>
+        </div>
+        <!-- FORTH -->
+        <!-- FIFTH -->
+        <div class="image-block" data-char="gatot">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/gatotkaca.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="gatot">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/gatotkaca.jpg" alt="">
+            </div>
+        </div>
+        <!-- FIFTH -->
+        <!-- SIXTH -->
+        <div class="image-block" data-char="gussion">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/gussion.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="gussion">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/gussion.jpg" alt="">
+            </div>
+        </div>
+        <!-- SIXTH -->
+        <!-- SEVENTH -->
+        <div class="image-block" data-char="kagura">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/kagura.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="kagura">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/kagura.jpg" alt="">
+            </div>
+        </div>
+        <!-- SEVENTH -->
+        <!-- EIGHTH -->
+        <div class="image-block" data-char="karina">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/karina.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="karina">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/karina.jpg" alt="">
+            </div>
+        </div>
+        <!-- EIGHTH -->
+        <!-- NINTH -->
+        <div class="image-block" data-char="ruby">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/ruby.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="ruby">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/ruby.jpg" alt="">
+            </div>
+        </div>
+        <!-- NINTH -->
+        <!-- TENTH -->
+        <div class="image-block" data-char="wanwan">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/wanwan.jpg" alt="">
+            </div>
+        </div>
+        <div class="image-block" data-char="wanwan">
+            <div class="character front"></div>
+            <div class="character back">
+                <img src="./images/wanwan.jpg" alt="">
+            </div>
+        </div>
+        <!-- TENTH -->
+    </div>
+    <!-- END GAME BLOCKS -->
+    <audio src="./music/good_game.mp3" preload="auto" id="success"></audio>
+    <audio src="./music/nana_myao.mp3" preload="auto" id="fail"></audio>
+    <audio src="./music/lagu_tiktok_ml_toxic.mp3" preload="auto" id="win"></audio>
+    <audio src="./music/lose-audio.wav" preload="auto" id="lose"></audio>
+    <audio src="./music/./welcome_to_ml.mp3" preload="auto" id="welcome"></audio>
+    <audio src="./music/./Mobile Legend intro.mp3" preload="auto" id="back"></audio>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
